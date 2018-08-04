@@ -11,10 +11,10 @@ export TARGET_IPV6="fd41:98cb:a6ff:5a6a::"
 
 # Native (local) ping command
 export NATIVE_PING="$(pwd)/iputils/ping"
-export NATIVE_DEV="eno1d1"
+export NATIVE_DEV="ens1f1"
 # Container ping command
 export PING_IMAGE_NAME="chrismisa/contools:ping"
-export CONTAINER_PING="docker run --rm $PING_IMAGE_NAME"
+export CONTAINER_PING="docker run --rm --network=host $PING_IMAGE_NAME"
 
 # Argument sequence is an associative array
 # between file suffixes and argument strings
